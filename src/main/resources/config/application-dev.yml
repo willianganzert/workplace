@@ -37,7 +37,7 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:postgresql://localhost:5432/workplace
         username: workplace
-        password:
+        password: 'willian'
         hikari:
             auto-commit: false
     jpa:
@@ -64,7 +64,7 @@ spring:
         cache: false
 
 server:
-    port: 8080
+    port: 9090
 
 # ===================================================================
 # JHipster specific properties
@@ -93,7 +93,7 @@ jhipster:
             key: 2edf7fc668beeaaf3ee0e4f73d10a028cb642120640afd9461b62661b7732e4ab8fec8ec704a1a1d9b3989a86098b3d97154
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: workplace@localhost
-        base-url: http://127.0.0.1:8080
+        base-url: http://127.0.0.1:9090
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx:
             enabled: true

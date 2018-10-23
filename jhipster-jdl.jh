@@ -2,20 +2,29 @@ entity Company {
 	name String
 }
 entity Employee {
-	name String
+	user_name String,
+	company_id String,
+	first_name String,
+	last_name String	
 }
-entity User {
+entity UserSys {
 	name String
+	password String
 }
 
 entity Room {
 	name String
+	json_ui_data Text	
 }
 entity Seat {
+	seat_id String
 	name String
 }
 entity Reservation {
-	name String
+	date LocalTime,
+	seat_id String,
+	user_name String,
+	note String
 }
 relationship OneToOne {
 	Employee{user} to User
