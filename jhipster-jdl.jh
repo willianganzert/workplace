@@ -1,0 +1,43 @@
+entity Company {
+	name String
+}
+entity Employee {
+	name String
+}
+entity User {
+	name String
+}
+
+entity Room {
+	name String
+}
+entity Seat {
+	name String
+}
+entity Reservation {
+	name String
+}
+relationship OneToOne {
+	Employee{user} to User
+}
+relationship OneToMany {
+	Company{employee} to Employee,
+    Company{room} to Room,
+    Room{seat} to Seat,
+    Seat{reservation} to Reservation,
+    Employee{reservation} to Reservation
+}
+
+
+// Set pagination options
+paginate Seat with infinite-scroll
+paginate Company with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

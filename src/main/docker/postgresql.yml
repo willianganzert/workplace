@@ -1,0 +1,11 @@
+version: '2'
+services:
+    workplace-postgresql:
+        image: postgres:10.4
+        # volumes:
+        #     - ~/volumes/jhipster/workplace/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=workplace
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
